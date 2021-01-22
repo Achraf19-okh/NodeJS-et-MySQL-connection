@@ -1,0 +1,42 @@
+const express = require('express');
+const authController = require('../controllers/auth');
+
+const router = express.Router();
+
+// router.get('/', authController.isLoggedIn, (req, res) => {
+//   console.log("inside");
+//   res.render('index');
+// });
+
+/*router.get('/', authController.isLoggedI, (req, res) => {
+  //console.log("inside");
+  console.log(req.nom);
+  res.render('index', {
+    nom: req.nom
+  });
+});
+
+/*router.get('/profile', authController.isLoggedIn, (req, res) => {
+  console.log("inside");
+  console.log(req.user);
+  if(req.user) {
+    res.render('profile', {
+      user: req.user
+    });
+  } else {
+    res.redirect("/login");
+  }
+  
+});*/
+
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+router.get('/register', (req, res) => {
+  res.render('register');
+});
+router.get("/",function(req,res){
+  res.render("index");
+});
+
+module.exports = router;

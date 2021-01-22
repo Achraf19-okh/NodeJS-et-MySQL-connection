@@ -1,0 +1,37 @@
+<%- include("header") -%>
+
+    <!-- Sign up ========================================== -->
+    <div class="formule">
+    <section>
+      <h1>S'inscrire</h1>
+      <a href="/login">Vous avez déjà un compte?</a>
+      <form class="" action="/" method="POST">
+        <div class="">
+          Type d'utilisateur
+        </div>
+        <label for="particulier">Particulier</label>
+        <input type="radio" name="type_client" value="" id="particulier">
+        <label for="societe">Société</label>
+        <input type="radio" name="typesclient" value="" id="societe"> <br>
+        <input type="text" name="nom" value="" id="prenom" placeholder="Nom de la famille">
+        <input type="text" name="prenom" value="" id="nom" placeholder="Prénom"><br>
+        <label for="pays">Choisissez la ville: </label>
+        <input type="text" name="ville" value="" id="ville"><br>
+        <label for="adresse">Adresse: </label><br>
+        <textarea id="adresse" name="adresse" rows="8" cols=""></textarea><br>
+        <input type="text" name="email" value="" id="mail" placeholder="Email">
+        <p>Un e-mail sera envoyé à votre nouvelle adresse e-mail, vérifiez-la en cliquant sur le lien
+          de vérification inclus </p><br>
+        <input type="text" name="tel" value="" id="mobile" placeholder="Mobile"><br>
+        <input type="password" name="password" value="" id="password" placeholder="Mot de passe"><br>
+        <input type="password" name="cfpassword" value="" id="passwordconfirm" placeholder="Confirmer Mot de passe"><br>
+        <input type="text" name="codeparrain" value="" id="code" placeholder="Code référence du parrain"><br>
+        <button type="submit" name="" class="btn btn-primary">S'incrire</button>
+      </form>
+    </section>
+   {{#if message}}
+      <h1>{{message}}</h1>
+    {{/if}}
+    </div>
+  
+<%- include("footer") -%>
